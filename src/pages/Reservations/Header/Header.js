@@ -1,5 +1,4 @@
 import "./Header.css";
-import reservationImg from "../../images/reservations.jpg";
 
 function Header() {
     return(
