@@ -1,4 +1,5 @@
-import littleLemonLogo from "../little-lemon-logos/Asset 16@4x.png";
+import "./Nav.css";
+import littleLemonLogo from "../../little-lemon-logos/Asset 16@4x.png";
 
 function Nav() {
     return(

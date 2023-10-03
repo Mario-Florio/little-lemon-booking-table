@@ -1,4 +1,5 @@
-import littleLemonLogo from "../little-lemon-logos/Asset 20@4x.png";
+import "./Footer.css";
+import littleLemonLogo from "../../little-lemon-logos/Asset 20@4x.png";
 
 function Footer() {
     return(

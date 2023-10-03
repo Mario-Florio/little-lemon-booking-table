@@ -1,0 +1,16 @@
+/* Footer */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Karla", serif;
+    background-color: #EDEFEE;
+    padding: 1rem 2rem;
+}
+
+footer nav, footer section {
+    margin-right: 1rem;
+}
+
+footer h3 {
+    margin-top: 0;
+}

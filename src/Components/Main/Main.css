@@ -1,0 +1,10 @@
+/* Main */
+main {
+    padding: 2rem;
+}
+
+main h2 {
+    font-family: "Karla", serif;
+    font-size: 1.2;
+    font-weight: 1000;
+}
