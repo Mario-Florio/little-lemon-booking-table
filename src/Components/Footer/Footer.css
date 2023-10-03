@@ -5,6 +5,7 @@ footer {
     font-family: "Karla", serif;
     background-color: #EDEFEE;
     padding: 1rem 2rem;
+    transition-duration: .2s;
 }
 
 footer nav, footer section {
@@ -28,5 +29,6 @@ footer a:hover {
 @media all and (min-width: 900px) {
     footer {
         padding: 1rem 12rem;
+        transition-duration: .2s;
     }
 }

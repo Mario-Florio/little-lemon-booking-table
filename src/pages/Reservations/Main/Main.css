@@ -2,6 +2,7 @@
 main {
     font-family: "Karla", serif;
     padding: 2rem;
+    transition-duration: .2s;
 }
 
 main h2 {
@@ -12,7 +13,6 @@ main h2 {
 
 main button {
     font-weight: 600;
-    color: white;
     background-color: #F4CE14;
     margin-top: 1rem;
     padding: .5rem 3.5rem;
@@ -28,12 +28,13 @@ main button:hover {
 main button:active {
     background-color: #F4CE14;
     padding: .4rem 3.4rem;
-    border: solid 2px #eee09c;
+    border: solid .1rem #eee09c;
 }
 
 @media all and (min-width: 900px) {
     main {
         padding-left: 12rem;
         padding-right: 12rem;
+        transition-duration: .2s;
     }
 }

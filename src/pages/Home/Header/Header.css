@@ -1,0 +1,37 @@
+.home__header {
+    background-image: linear-gradient(to bottom, #495E57 0%, #495E57 75%, white 75%, white 100%);
+    height: 25rem;
+    padding: 2rem;
+    transition-duration: .2s;
+}
+
+.home__header p {
+    max-width: 220px;
+    margin-bottom: .5rem;
+}
+
+.home__header button {
+    font-weight: 600;
+    background-color: #F4CE14;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.home__header button:hover {
+    background-color: #bea110;
+}
+
+.home__header button:active {
+    background-color: #F4CE14;
+    padding: .4rem .9rem;
+    border: solid .1rem #eee09c;
+}
+
+@media all and (min-width: 900px) {
+    .home__header {
+        padding: 2rem 12rem;
+        transition-duration: .2s;
+    }
+}
