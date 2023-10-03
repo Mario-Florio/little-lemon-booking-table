@@ -38,7 +38,21 @@ header {
 }
 
 header h1 {
+    font-family: "Markazi Text", serif;
+    font-size: 4rem;
     color: #F4CE14;
+    margin: 0;
+}
+header h2 {
+    font-family: "Markazi Text", serif;
+    font-size: 2.5rem;
+    color: white;
+    margin: 0;
+}
+
+header p {
+    font-family: "Karla", serif;
+    color: white;
 }
 
 /* Main */
