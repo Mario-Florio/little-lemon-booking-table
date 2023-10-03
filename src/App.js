@@ -1,15 +1,13 @@
 import './App.css';
 import Nav from './components/Nav/Nav';
-import Header from './pages/Reservations/Header/Header';
-import Main from './pages/Reservations/Main/Main';
+import Reservations from './pages/Reservations/Reservations';
 import Footer from './components/Footer/Footer';
 
 function App() {
   return (
     <>
       <Nav/>
-      <Header/>
-      <Main/>
+      <Reservations/>
       <Footer/>
     </>
   );
