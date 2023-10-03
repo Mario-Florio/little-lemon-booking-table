@@ -2,34 +2,13 @@
 .reservations__header {
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("./images/reservations.jpg");
+        url("./reservations.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     height: 20rem;
     padding: 2rem;
     transition-duration: .2s;
-}
-
-header h1 {
-    font-family: "Markazi Text", serif;
-    font-size: 4rem;
-    color: #F4CE14;
-    margin: 0;
-}
-header h2 {
-    font-family: "Markazi Text", serif;
-    font-size: 2.5rem;
-    font-weight: 500;
-    color: white;
-    margin: 0;
-    margin-top: -1.5rem;
-}
-
-header p {
-    font-family: "Karla", serif;
-    font-weight: 500;
-    color: white;
 }
 
 @media all and (min-width: 900px) {

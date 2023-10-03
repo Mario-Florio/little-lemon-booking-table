@@ -15,3 +15,26 @@ a {
     color: black;
     text-decoration: none;
 }
+
+/* Header */
+header h1 {
+    font-family: "Markazi Text", serif;
+    font-size: 4rem;
+    font-weight: 600;
+    color: #F4CE14;
+    margin: 0;
+}
+header h2 {
+    font-family: "Markazi Text", serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: white;
+    margin: 0;
+    margin-top: -1.5rem;
+}
+
+header p {
+    font-family: "Karla", serif;
+    font-weight: 500;
+    color: white;
+}
