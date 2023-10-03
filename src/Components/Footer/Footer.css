@@ -12,7 +12,17 @@ footer nav, footer section {
 }
 
 footer h3 {
+    font-size: 1rem;
     margin-top: 0;
+}
+
+footer li, footer p {
+    font-size: .7rem;
+    margin: 0;
+}
+
+footer a:hover {
+    color: #F4CE14;
 }
 
 @media all and (min-width: 900px) {
