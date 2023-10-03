@@ -13,3 +13,9 @@
     font-family: "Karla", serif;
     font-weight: 600;
 }
+
+@media all and (min-width: 900px) {
+    .navbar {
+        padding: 1rem 12rem;
+    }
+}

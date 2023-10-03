@@ -14,3 +14,9 @@ footer nav, footer section {
 footer h3 {
     margin-top: 0;
 }
+
+@media all and (min-width: 900px) {
+    footer {
+        padding: 1rem 12rem;
+    }
+}

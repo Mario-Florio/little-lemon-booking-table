@@ -8,3 +8,10 @@ main h2 {
     font-size: 1.2;
     font-weight: 1000;
 }
+
+@media all and (min-width: 900px) {
+    main {
+        padding-left: 12rem;
+        padding-right: 12rem;
+    }
+}

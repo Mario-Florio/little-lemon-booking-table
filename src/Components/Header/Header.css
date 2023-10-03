@@ -1,8 +1,12 @@
 /* Header */
 header {
-    display: flex;
-    justify-content: space-between;
-    background-image: linear-gradient(180deg, #495E57 75%, white 25%);
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../../images/reservations.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 20rem;
     padding: 2rem;
 }
 
@@ -25,10 +29,8 @@ header p {
     color: white;
 }
 
-header img {
-    width: 40%;
-    max-width: 300px;
-    height: 350px;
-    border-radius: 1rem;
-    object-fit: cover;
+@media all and (min-width: 900px) {
+    header {
+        padding: 2rem 12rem;
+    }
 }
