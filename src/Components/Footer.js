@@ -1,10 +1,10 @@
-import littleLemonLogo from "../little-lemon-logos/Asset 9@4x.png";
+import littleLemonLogo from "../little-lemon-logos/Asset 20@4x.png";
 
 function Footer() {
     return(
         <footer>
             <nav>
-                <a href="/"><img src={littleLemonLogo} width="50" alt="Little Lemon Logo"/></a>
+                <a href="/"><img src={littleLemonLogo} width="100" alt="Little Lemon Logo"/></a>
             </nav>
             <nav>
                 <h3>Doormat Navigation</h3>
