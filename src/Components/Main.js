@@ -16,8 +16,8 @@ function Main() {
                 <input type="time" name="time" id="time"/><br/>
                 <label htmlFor="diners">Number of Diners</label><br/>
                 <input type="number" name="diners" id="diners" min="1" max="6"/><br/>
+                <button type="submit">Submit</button>
             </form>
-            <button type="submit">Submit</button>
         </main>
     );
 }
