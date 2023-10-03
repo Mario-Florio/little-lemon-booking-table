@@ -28,7 +28,8 @@ a {
 .navbar ul {
     display: flex;
     flex-wrap: wrap;
-    font-weight: 500;
+    font-family: "Karla", serif;
+    font-weight: 600;
 }
 
 /* Header */
@@ -58,6 +59,12 @@ header p {
 /* Main */
 main {
     padding: 2rem;
+}
+
+main h2 {
+    font-family: "Karla", serif;
+    font-size: 1.2;
+    font-weight: 1000;
 }
 
 /* Footer */

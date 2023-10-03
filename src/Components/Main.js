@@ -2,7 +2,7 @@
 function Main() {
     return(
         <main>
-            <h2>Form</h2>
+            <h2>FORM</h2>
             <form onSubmit={(e) => e.preventDefault()}>
                 <label htmlFor="firstName">First Name</label><br/>
                 <input type="text" name="firstName" id="firstName"/><br/>
