@@ -1,7 +1,7 @@
 .home__header {
     display: flex;
     justify-content: space-between;
-    background-image: linear-gradient(to bottom, #495E57 0%, #495E57 75%, white 75%, white 100%);
+    background-image: linear-gradient(to bottom, #495E57 0%, #495E57 80%, white 80%, white 100%);
     height: 25rem;
     padding: 2rem;
     transition-duration: .2s;
@@ -9,16 +9,15 @@
 
 .home__header p {
     max-width: 220px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .home__header a {
-    font-size: .9rem;
-    font-weight: 600;
+    font-weight: 700;
     background-color: #F4CE14;
-    padding: .5rem 1rem;
+    padding: .9rem 1.9rem;
     border: none;
-    border-radius: .5rem;
+    border-radius: 1rem;
     cursor: pointer;
 }
 
@@ -28,15 +27,15 @@
 
 .home__header a:active {
     background-color: #F4CE14;
-    padding: .4rem .9rem;
+    padding: .8rem 1.8rem;
     border: solid .1rem #eee09c;
 }
 
 .home__header img {
     border-radius: 1rem;
     margin-top: 1rem;
-    height: 320px;
-    width: 300px;
+    height: 340px;
+    width: 320px;
     object-fit: cover;
 }
 
