@@ -8,11 +8,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .specials header h3 {
     font-family: "Markazi Text", serif;
     font-size: 4rem;
+    font-weight: 600;
+    margin-top: 0;
 }
 
 .specials header a {
@@ -22,6 +25,7 @@
     border: none;
     border-radius: .7rem;
     cursor: pointer;
+    margin-top: -4rem;
 }
 
 .specials header a:hover {
