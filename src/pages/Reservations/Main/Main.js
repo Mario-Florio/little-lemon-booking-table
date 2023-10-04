@@ -2,7 +2,7 @@ import "./Main.css";
 
 function Main() {
     return(
-        <section className=".reservations">
+        <section className="reservations">
             <h2>RESERVE A TABLE</h2>
             <form onSubmit={(e) => e.preventDefault()}>
                 <label htmlFor="firstName">First Name</label><br/>
