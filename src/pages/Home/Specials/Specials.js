@@ -1,12 +1,13 @@
 import "./Specials.css";
 import specials from "./specialsData";
+import { Link } from "react-router-dom";
 
 function Specials() {
     return(
         <section className="specials">
             <header>
                 <h3>This Weeks Specials!</h3>
-                <a href="/menu">Online Menu</a>
+                <Link>Online Menu</Link>
             </header>
             <section className="specials__mainContent">
                 {specials.map(special => 
