@@ -1,12 +1,12 @@
 
 .testimonials {
+    font-family: "Karla", serif;
     background-color: #333333;
     padding: 7rem 2rem 12rem 2rem;
     transition-duration: .2s;
 }
 
 .testimonials h3 {
-    font-family: 'Karla', serif;
     font-size: 2rem;
     font-weight: 700;
     color: white;
@@ -26,8 +26,8 @@
     justify-content: space-between;
     background-color: #EDEFEE;
     padding: 1rem;
-    width: 195px;
-    height: 170px;
+    width: 250px;
+    height: 200px;
     border-radius: 8px;
     box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.195);
 }
@@ -40,14 +40,14 @@
 .testimonials .card p {
     position: relative;
     top: .5rem;
-    font-weight: 600;
+    font-weight: 700;
     margin: .5rem;
 }
 
 .testimonials .card img {
-    width: 75px;
-    height: 75px;
-    border-radius: 20%;
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
     object-fit: cover;
 }
 

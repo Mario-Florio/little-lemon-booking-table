@@ -39,7 +39,8 @@ function Card(props) {
         <article className="card">
             <div>
                 <div>
-                    {generateStars(rating).map((rating, i) =>
+                    <div style={{ marginBottom: ".5rem" }}>
+                        {generateStars(rating).map((rating, i) =>
                             <img 
                                 key={i}
                                 src={star} 
@@ -47,10 +48,10 @@ function Card(props) {
                                 style={{
                                     width: "15px",
                                     height: "15px",
-                                    marginBottom: ".7rem"
                                 }}
                             />
                         )}
+                    </div>
                     <img src={img} alt={`${name}'s profile pic`}/>
                 </div>
                 <p>{name}</p>
