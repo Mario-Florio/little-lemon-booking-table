@@ -53,7 +53,7 @@
     border-top-left-radius: 1rem;
 }
 
-.card__content {
+.specials .card__content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -61,7 +61,7 @@
     height: calc(100% - 35% - 2rem);
 }
 
-.card header {
+.specials .card header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,7 +73,7 @@
     margin: 0;
 }
 
-.card header span {
+.specials .card header span {
     font-size: .9rem;
     color: rgb(250, 82, 82);
 }
@@ -84,7 +84,7 @@
     color: rgb(92, 92, 92);
 }
 
-.card footer {
+.specials .card footer {
     font-size: .8rem;
     font-weight: 700;
     padding: 0;

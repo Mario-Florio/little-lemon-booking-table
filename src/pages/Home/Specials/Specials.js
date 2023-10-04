@@ -1,7 +1,7 @@
 import "./Specials.css";
-import specials from "./special";
+import specials from "./specialsData";
 
-function Main() {
+function Specials() {
     return(
         <section className="specials">
             <header>
@@ -17,7 +17,7 @@ function Main() {
     )
 }
 
-export default Main;
+export default Specials;
 
 function Card(props) {
 
