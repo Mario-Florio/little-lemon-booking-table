@@ -1,5 +1,6 @@
 import "./Footer.css";
 import littleLemonLogo from "../../little-lemon-logos/Asset 20@4x.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
     return(
@@ -10,12 +11,12 @@ function Footer() {
             <nav>
                 <h3>Doormat Navigation</h3>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/menu">Menu</a></li>
-                    <li><a href="/reservations">Reservations</a></li>
-                    <li><a href="/order-online">Order Online</a></li>
-                    <li><a href="/login">Login</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link>About</Link></li>
+                    <li><Link>Menu</Link></li>
+                    <li><Link to="/reservations">Reservations</Link></li>
+                    <li><Link>Order Online</Link></li>
+                    <li><Link>Login</Link></li>
                 </ul>
             </nav>
             <section>
@@ -27,8 +28,8 @@ function Footer() {
             <section>
                 <h3>Social Media Links</h3>
                 <ul>
-                    <li><a href="/">Facebook</a></li>
-                    <li><a href="/">Twitter</a></li>
+                    <li><span>Facebook</span></li>
+                    <li><span>Twitter</span></li>
                 </ul>
             </section>
         </footer>
