@@ -3,7 +3,7 @@ import testimonials from "./testimonialsData";
 
 function Testimonials() {
     return(
-        <section>
+        <section className="testimonials">
             <h3>Testimonials</h3>
             <section>
                 {testimonials.map(testimonial => 
@@ -26,7 +26,7 @@ function Card(props) {
     const { rating, img, review, name } = props;
 
     return(
-        <article>
+        <article className=".card">
             <div>
                 <h5>{rating}</h5>
                 <img src={img}/>

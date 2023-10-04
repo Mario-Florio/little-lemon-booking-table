@@ -1,17 +1,17 @@
 /* Main */
-main {
+.reservations {
     font-family: "Karla", serif;
     padding: 2rem;
     transition-duration: .2s;
 }
 
-main h2 {
+.reservations h2 {
     font-family: "Karla", serif;
     font-size: 1.2;
     font-weight: 1000;
 }
 
-main button {
+.reservations button {
     font-weight: 600;
     background-color: #F4CE14;
     margin-top: 1rem;
@@ -21,18 +21,18 @@ main button {
     cursor: pointer;
 }
 
-main button:hover {
+.reservations button:hover {
     background-color: #bea110;
 }
 
-main button:active {
+.reservations button:active {
     background-color: #F4CE14;
     padding: .4rem 3.4rem;
     border: solid .1rem #eee09c;
 }
 
 @media all and (min-width: 900px) {
-    main {
+    .reservations {
         padding-left: 12rem;
         padding-right: 12rem;
         transition-duration: .2s;

@@ -2,7 +2,7 @@ import "./Main.css";
 
 function Main() {
     return(
-        <main>
+        <section className=".reservations">
             <h2>RESERVE A TABLE</h2>
             <form onSubmit={(e) => e.preventDefault()}>
                 <label htmlFor="firstName">First Name</label><br/>
@@ -19,7 +19,7 @@ function Main() {
                 <input type="number" name="diners" id="diners" min="1" max="6"/><br/>
                 <button type="submit">Submit</button>
             </form>
-        </main>
+        </section>
     );
 }
 

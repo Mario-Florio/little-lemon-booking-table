@@ -1,4 +1,9 @@
 
+.specials {
+    padding: 2rem;
+    transition-duration: .2s;
+}
+
 .specials header {
     display: flex;
     justify-content: space-between;
@@ -89,4 +94,11 @@
     font-weight: 700;
     padding: 0;
     cursor: pointer;
+}
+
+@media all and (min-width: 900px) {
+    .specials {
+        padding: 2rem 12rem;
+        transition-duration: .2s;
+    }
 }

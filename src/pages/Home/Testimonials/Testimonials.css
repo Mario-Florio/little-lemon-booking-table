@@ -1,0 +1,19 @@
+
+.testimonials {
+    background-color: #333333;
+    padding: 2rem;
+    transition-duration: .2s;
+}
+
+.testimonials h3 {
+    font-family: 'Karla', serif;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+@media all and (min-width: 900px) {
+    .testimonials {
+        padding: 2rem 12rem;
+        transition-duration: .2s;
+    }
+}
