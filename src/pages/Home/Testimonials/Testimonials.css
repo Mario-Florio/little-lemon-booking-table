@@ -29,6 +29,7 @@
     width: 195px;
     height: 170px;
     border-radius: 8px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.195);
 }
 
 .testimonials .card > div {
