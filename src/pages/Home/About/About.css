@@ -52,7 +52,7 @@
     object-position: -200px;
 }
 
-@media all and (min-width: 900px) {
+@media all and (min-width: 1000px) {
     .about {
         padding: 2rem 12rem;
         transition-duration: .2s;

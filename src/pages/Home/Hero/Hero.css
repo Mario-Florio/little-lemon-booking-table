@@ -64,7 +64,7 @@
     }
 }
 
-@media all and (min-width: 900px) {
+@media all and (min-width: 1000px) {
     .home__header {
         padding: 2rem 12rem;
         transition-duration: .2s;

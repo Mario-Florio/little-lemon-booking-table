@@ -26,7 +26,7 @@ footer a:hover {
     color: #F4CE14;
 }
 
-@media all and (min-width: 900px) {
+@media all and (min-width: 1000px) {
     footer {
         padding: 1rem 12rem;
         transition-duration: .2s;
