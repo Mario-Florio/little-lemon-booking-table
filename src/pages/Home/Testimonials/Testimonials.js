@@ -1,5 +1,6 @@
 import "./Testimonials.css";
 import testimonials from "./testimonialsData";
+import star from "./images/star.png"
 
 function Testimonials() {
     return(
@@ -8,6 +9,7 @@ function Testimonials() {
             <section>
                 {testimonials.map(testimonial => 
                     <Card 
+                        key={testimonial.name}
                         rating={testimonial.rating}
                         img={testimonial.img}
                         review={testimonial.review}
@@ -25,14 +27,35 @@ function Card(props) {
 
     const { rating, img, review, name } = props;
 
+    function generateStars(rating) {
+        let arr = [];
+        for (let i = 0; i < rating; i++) {
+            arr.push("");
+        }
+        return arr;
+    }
+
     return(
-        <article className=".card">
+        <article className="card">
             <div>
-                <h5>{rating}</h5>
-                <img src={img}/>
-                <span>{review}</span>
+                <div>
+                    {generateStars(rating).map((rating, i) =>
+                            <img 
+                                key={i}
+                                src={star} 
+                                alt="star"
+                                style={{
+                                    width: "15px",
+                                    height: "15px",
+                                    marginBottom: ".7rem"
+                                }}
+                            />
+                        )}
+                    <img src={img} alt={`${name}'s profile pic`}/>
+                </div>
+                <p>{name}</p>
             </div>
-            <p>{name}</p>
+            <span>{review}</span>
         </article>
     );
 }
