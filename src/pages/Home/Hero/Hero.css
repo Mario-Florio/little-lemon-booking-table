@@ -39,6 +39,31 @@
     object-fit: cover;
 }
 
+@media all and (max-width: 650px) {
+}
+
+@media all and (max-width: 700px) {
+    .home__header {
+        background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+        url("./hero.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .home__header h1 {
+        font-size: 3.5rem;
+    }
+    
+    .home__header a {
+        font-size: .8rem;
+    }
+
+    .home__header img {
+        display: none;
+    }
+}
+
 @media all and (min-width: 900px) {
     .home__header {
         padding: 2rem 12rem;

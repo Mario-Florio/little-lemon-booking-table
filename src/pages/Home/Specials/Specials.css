@@ -96,6 +96,16 @@
     cursor: pointer;
 }
 
+@media all and (max-width: 700px) {
+    .specials header h3 {
+        font-size: 3rem;
+    }
+    
+    .specials header a {
+        font-size: .8rem;
+    }
+}
+
 @media all and (min-width: 900px) {
     .specials {
         padding: 2rem 12rem;
