@@ -1,10 +1,10 @@
-import Header from "./Header/Header";
+import Hero from "./Hero/Hero";
 import Main from "./Main/Main";
 
 function Home() {
     return(
         <>
-            <Header/>
+            <Hero/>
             <Main/>
         </>
     );

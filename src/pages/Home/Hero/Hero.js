@@ -1,5 +1,5 @@
-import "./Header.css";
-import headerImg from "./header.jpg";
+import "./Hero.css";
+import heroImg from "./hero.jpg";
 
 function Header() {
     return(
@@ -10,7 +10,7 @@ function Header() {
                 <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
                 <a href="/reservations">Reserve a Table</a>
             </section>
-            <img src={headerImg} alt="Waiter holding dish of food."/>
+            <img src={heroImg} alt="Waiter holding dish of food."/>
         </header>
     );
 }
