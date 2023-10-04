@@ -1,11 +1,13 @@
 import Hero from "./Hero/Hero";
-import Main from "./Main/Main";
+import Specials from "./Specials/Specials";
 
 function Home() {
     return(
         <>
             <Hero/>
-            <Main/>
+            <main>
+                <Specials/>
+            </main>
         </>
     );
 }

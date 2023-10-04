@@ -1,19 +1,19 @@
-import "./Main.css";
+import "./Specials.css";
 import specials from "./special";
 
 function Main() {
     return(
-        <main className="home__main">
-            <div className="home__mainHeader">
+        <section className="specials">
+            <header>
                 <h3>This Weeks Specials!</h3>
                 <a href="/menu">Online Menu</a>
-            </div>
-            <div className="home__mainContent">
+            </header>
+            <section className="specials__mainContent">
                 {specials.map(special => 
                     <Card key={special.name} img={special.img} name={special.name} price={special.price} desc={special.desc}/>)
                 }
-            </div>
-        </main>
+            </section>
+        </section>
     )
 }
 
@@ -24,15 +24,15 @@ function Card(props) {
     const { img, name, price, desc } = props;
 
     return(
-        <article>
+        <article className="card">
             <img src={img} alt={name}/>
             <div className="card__content">
-                <div className="card__header">
+                <header>
                     <h4>{name}</h4>
                     <span>{price}</span>
-                </div>
+                </header>
                 <p>{desc}</p>
-                <span className="card__footer">Order Delivery</span>
+                <footer>Order Delivery</footer>
             </div>
         </article>
     )

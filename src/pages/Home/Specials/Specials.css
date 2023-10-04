@@ -1,16 +1,16 @@
 
-.home__mainHeader {
+.specials header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.home__mainHeader h3 {
+.specials header h3 {
     font-family: "Markazi Text", serif;
     font-size: 2.5rem;
 }
 
-.home__mainHeader a {
+.specials header a {
     font-size: .9rem;
     font-weight: 600;
     background-color: #F4CE14;
@@ -20,24 +20,24 @@
     cursor: pointer;
 }
 
-.home__mainHeader a:hover {
+.specials header a:hover {
     background-color: #bea110;
 }
 
-.home__mainHeader a:active {
+.specials header a:active {
     background-color: #F4CE14;
     padding: .4rem .9rem;
     border: solid .1rem #eee09c;
 }
 
-.home__mainContent{
+.specials__mainContent{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 1rem;
 }
 
-.home__mainContent article {
+.specials__mainContent article {
     background-color: #EDEFEE;
     width: 30%;
     min-width: 200px;
@@ -45,7 +45,7 @@
     border-top-right-radius: 1rem;
 }
 
-.home__mainContent img {
+.specials__mainContent img {
     height: 35%;
     width: 100%;
     object-fit: cover;
@@ -61,31 +61,32 @@
     height: calc(100% - 35% - 2rem);
 }
 
-.card__header {
+.card header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.home__mainContent h4 {
+.specials__mainContent h4 {
     font-family: "Markazi Text", serif;
     font-size: 1.2rem;
     margin: 0;
 }
 
-.card__header span {
+.card header span {
     font-size: .9rem;
     color: rgb(250, 82, 82);
 }
 
-.home__mainContent p {
+.specials__mainContent p {
     font-size: .8rem;
     min-height: 100px;
     color: rgb(92, 92, 92);
 }
 
-.card__footer {
+.card footer {
     font-size: .8rem;
     font-weight: 700;
+    padding: 0;
     cursor: pointer;
 }
