@@ -1,5 +1,5 @@
-/* Footer */
-footer {
+/* .Footer */
+.footer {
     display: flex;
     flex-wrap: wrap;
     font-family: "Karla", serif;
@@ -8,26 +8,26 @@ footer {
     transition-duration: .2s;
 }
 
-footer nav, footer section {
+.footer nav, .footer section {
     margin-right: 1rem;
 }
 
-footer h3 {
+.footer h3 {
     font-size: 1rem;
     margin-top: 0;
 }
 
-footer li, footer p {
+.footer li, .footer p {
     font-size: .7rem;
     margin: 0;
 }
 
-footer a:hover {
+.footer a:hover {
     color: #F4CE14;
 }
 
 @media all and (min-width: 1000px) {
-    footer {
+    .footer {
         padding: 1rem 12rem;
         transition-duration: .2s;
     }

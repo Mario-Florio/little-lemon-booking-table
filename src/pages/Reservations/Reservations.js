@@ -1,6 +1,6 @@
 import Header from "./Header/Header";
 import BookingForm from "./BookingForm/BookingForm";
-import { useEffect, useReducer, useState } from "react";
+import { useReducer, useState } from "react";
 import { fetchAPI, submitAPI } from "../../utils/fetchAPI";
 
 let today = new Date().toLocaleString();

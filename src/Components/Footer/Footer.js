@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
     return(
-        <footer>
+        <footer className="footer">
             <nav>
                 <a href="/"><img src={littleLemonLogo} width="100" alt="Little Lemon Logo"/></a>
             </nav>

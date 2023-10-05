@@ -63,6 +63,7 @@
 }
 
 .specials .card__content {
+    font-family: "Karla", serif;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
