@@ -6,7 +6,7 @@ today = new Date(today).toISOString().split('T')[0];
 
 function BookingForm(props) {
 
-    const { availableTimes, setAvailableTimes } = props;
+    const { availableTimes, setAvailableTimes, submitForm } = props;
 
     const [date, setDate] = useState(null);
     const [dateInput, setDateInput] = useState(today);
@@ -19,15 +19,6 @@ function BookingForm(props) {
 
     const [occasion, setOccasion] = useState(null);
     const [occasionInput, setOccasionInput] = useState("None");
-
-    useEffect(() => {
-        console.log({
-            date: date,
-            time: time,
-            guests: guests,
-            occasion: occasion,
-        });
-    }, [date, time, guests, occasion]);
 
     function handleChangeDate(e) {
         setDateInput(e.target.value);
@@ -48,6 +39,12 @@ function BookingForm(props) {
 
     function onSubmit(e) {
         e.preventDefault();
+        const formData = {
+            date: date,
+            time: time,
+            guests: guests,
+            occasion: occasion,
+        }
         setDate(dateInput);
         setTime(timeInput);
         setGuests(guestsInput);
@@ -56,18 +53,19 @@ function BookingForm(props) {
         setTimeInput(availableTimes[0]);
         setGuestsInput("1");
         setOccasionInput("None");
+        submitForm(formData);
     }
 
     return(
         <section className="reservations">
             <h2>RESERVE A TABLE</h2>
             <form onSubmit={onSubmit}>
-                <label htmlFor="firstName">First Name</label><br/>
+                {/* <label htmlFor="firstName">First Name</label><br/>
                 <input type="text" name="firstName" id="firstName"/><br/>
                 <label htmlFor="lastName">Last Name</label><br/>
                 <input type="text" name="lastName" id="lastName"/><br/>
                 <label htmlFor="email">Email</label><br/>
-                <input type="text" name="email" id="email" autoComplete="on"/><br/>
+                <input type="text" name="email" id="email" autoComplete="on"/><br/> */}
                 <label htmlFor="date">Date</label><br/>
                 <input 
                     type="date" 
@@ -77,6 +75,7 @@ function BookingForm(props) {
                     value={dateInput}
                     onChange={handleChangeDate}
                     required={true}
+                    data-testid="date"
                 /><br/>
                 <label htmlFor="time">Time</label><br/>
                 <select 

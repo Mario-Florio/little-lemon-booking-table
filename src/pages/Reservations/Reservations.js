@@ -1,9 +1,13 @@
 import Header from "./Header/Header";
 import BookingForm from "./BookingForm/BookingForm";
-import { useReducer } from "react";
-import { fetchAPI } from "../../utils/fetchAPI";
+import { useEffect, useReducer, useState } from "react";
+import { fetchAPI, submitAPI } from "../../utils/fetchAPI";
+
+let today = new Date().toLocaleString();
+today = new Date(today).toISOString().split('T')[0];
 
 function Reservations() {
+    const [bookingConfirmed, setBookingConfirmed] = useState(false);
     const [availableTimes, setAvailableTimes] = useReducer(updateTimes, initializeTimes());
 
     function updateTimes(availableTimes, date) {
@@ -13,22 +17,29 @@ function Reservations() {
     }
 
     function initializeTimes() {
-        // fetchAPI returns tms available times within this function (unlike 'updateTimes')
-        // due to this, it is currently neccessary to initialize with yesterdays date
-        let yesterday = new Date().toLocaleString();
-        yesterday = new Date(yesterday);
-        yesterday.setDate(yesterday.getDate() - 1);
-        return fetchAPI(new Date(yesterday));
+        return fetchAPI(new Date(today));
+    }
+
+    function submitForm(formData) {
+        submitAPI(formData) && setBookingConfirmed(true);
     }
 
     return(
         <>
             <Header/>
             <main>
+                {!bookingConfirmed ?
                 <BookingForm 
                     availableTimes={availableTimes}
                     setAvailableTimes={setAvailableTimes}
+                    submitForm={submitForm}
                 />
+                    :
+                <section className="reservations">
+                    <h3>Your reservation has been confirmed</h3>
+                    <p>We will be waiting to seat you!</p>
+                </section>
+                }
             </main>
         </>
     );
