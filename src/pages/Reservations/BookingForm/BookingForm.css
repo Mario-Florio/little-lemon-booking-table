@@ -11,6 +11,11 @@
     font-weight: 1000;
 }
 
+.reservations .errorMsg {
+    font-size: .7rem;
+    color: red;
+}
+
 .reservations button {
     font-weight: 600;
     background-color: #F4CE14;

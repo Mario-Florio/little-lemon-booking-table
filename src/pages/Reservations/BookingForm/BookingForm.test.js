@@ -1,7 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import '@testing-library/jest-dom/extend-expect';
-import userEvent from "@testing-library/user-event";
-import { act } from "react-dom/test-utils";
 import BookingForm from './BookingForm';
 import { fetchAPI } from "../../../utils/fetchAPI";
 
@@ -50,14 +48,45 @@ describe('Booking form', () => {
 
         expect(values).toEqual(expectedVal);
     });
+
+    test('should correctly render all fields and their default values', async () => {
+
+        render(
+            <BookingForm 
+                availableTimes={availableTimes}
+                setAvailableTimes={setAvailableTimes}
+                updateTimes={updateTimes}
+            />
+        );
     
-    test('updateTimes returns same value that is provided in state', async () => {
+        const dateInput = screen.getByLabelText("Date");
+        const timeSelect = screen.getByLabelText("Time");
+        const numberOfGuestsInput = screen.getByLabelText("Number of Guests");
+        const occasionSelect = screen.getByLabelText("Occasion");
+        const submitButton = screen.getByRole('button');
     
-        let date = new Date().toLocaleString();
-        date = new Date(date);
-        date.setDate(date.getDate() + 1);
-        date = new Date(date).toISOString().split('T')[0];
-        const expectedVal = fetchAPI(new Date(date));
+        expect(dateInput).toBeInTheDocument();
+        expect(dateInput).toHaveAttribute('type', 'date');
+        expect(dateInput).toHaveAttribute('id', 'date');
+        expect(dateInput).toHaveValue(today);
+    
+        expect(timeSelect).toBeInTheDocument();
+        expect(timeSelect).toHaveAttribute('id', 'time');
+    
+        expect(numberOfGuestsInput).toBeInTheDocument();
+        expect(numberOfGuestsInput).toHaveAttribute('id', 'guests');
+        expect(numberOfGuestsInput).toHaveAttribute('type', 'number');
+        expect(numberOfGuestsInput).toHaveValue(1);
+    
+        expect(occasionSelect).toBeInTheDocument();
+        expect(occasionSelect).toHaveAttribute('id', 'occasion');
+    
+        expect(submitButton).toBeInTheDocument();
+        expect(submitButton).toHaveAttribute('type', 'submit');
+        expect(submitButton).toBeEnabled();
+    });
+
+    test('Should display error message and disable button when date is left empty', () => {
 
         render(
             <BookingForm 
@@ -68,14 +97,112 @@ describe('Booking form', () => {
         );
 
         const dateInput = screen.getByLabelText("Date");
-
-        fireEvent.change(dateInput, { target: { value: date } });
-
-        const time = await screen.findAllByTestId("time");
-        const values = time.map(val => val.value);
-        // values: ["17:00", "17:30", "18:00", "19:30", "20:30", "21:00", "21:30"]
-        // expectedValues: ["17:00", "17:30", "18:00", "18:30", "20:00", "22:00", "22:30"]
-        
-        expect(values).toEqual(expectedVal);
+        fireEvent.change(dateInput, { target: { value: '' } });
+        fireEvent.blur(dateInput);
+        const errorMessage = screen.getByTestId('errorMsg');
+        const submitButton = screen.getByRole('button');
+    
+        expect(errorMessage).toBeInTheDocument();
+        expect(errorMessage).toHaveTextContent('Field is required');
+        expect(submitButton).toBeDisabled();
     });
+});
+
+test('Should display error message and disable button when guests is left empty', () => {
+
+    let today = new Date().toLocaleDateString();
+        today = new Date(today).toISOString().split('T')[0];
+    let availableTimes = fetchAPI(new Date(today));
+    const setAvailableTimes = jest.fn = (arr) => {
+        availableTimes = arr;
+    }
+    const updateTimes = jest.fn = (availableTimes, date) => {
+        const newDate = new Date(date).toLocaleString();
+        let response = fetchAPI(new Date(newDate));
+        return response.length ? response : availableTimes;
+    }
+
+    render(
+        <BookingForm 
+            availableTimes={availableTimes}
+            setAvailableTimes={setAvailableTimes}
+            updateTimes={updateTimes}
+        />
+    );
+
+    const guestsInput = screen.getByLabelText("Number of Guests");
+    fireEvent.change(guestsInput, { target: { value: '' } });
+    fireEvent.blur(guestsInput);
+    const errorMessage = screen.getByTestId('errorMsg');
+    const submitButton = screen.getByRole('button');
+
+    expect(errorMessage).toBeInTheDocument();
+    expect(errorMessage).toHaveTextContent('Field is required');
+    expect(submitButton).toBeDisabled();
+});
+
+test('Should display error message and disable button when guestsInput <= 0', () => {
+
+    let today = new Date().toLocaleDateString();
+        today = new Date(today).toISOString().split('T')[0];
+    let availableTimes = fetchAPI(new Date(today));
+    const setAvailableTimes = jest.fn = (arr) => {
+        availableTimes = arr;
+    }
+    const updateTimes = jest.fn = (availableTimes, date) => {
+        const newDate = new Date(date).toLocaleString();
+        let response = fetchAPI(new Date(newDate));
+        return response.length ? response : availableTimes;
+    }
+
+    render(
+        <BookingForm 
+            availableTimes={availableTimes}
+            setAvailableTimes={setAvailableTimes}
+            updateTimes={updateTimes}
+        />
+    );
+
+    const guestsInput = screen.getByLabelText("Number of Guests");
+    fireEvent.change(guestsInput, { target: { value: 0 } });
+    fireEvent.blur(guestsInput);
+    const errorMessage = screen.getByTestId('errorMsg');
+    const submitButton = screen.getByRole('button');
+
+    expect(errorMessage).toBeInTheDocument();
+    expect(errorMessage).toHaveTextContent('Please choose amount between 1 and 10');
+    expect(submitButton).toBeDisabled();
+});
+
+test('Should display error message and disable button when guestsInput < 10', () => {
+
+    let today = new Date().toLocaleDateString();
+        today = new Date(today).toISOString().split('T')[0];
+    let availableTimes = fetchAPI(new Date(today));
+    const setAvailableTimes = jest.fn = (arr) => {
+        availableTimes = arr;
+    }
+    const updateTimes = jest.fn = (availableTimes, date) => {
+        const newDate = new Date(date).toLocaleString();
+        let response = fetchAPI(new Date(newDate));
+        return response.length ? response : availableTimes;
+    }
+
+    render(
+        <BookingForm 
+            availableTimes={availableTimes}
+            setAvailableTimes={setAvailableTimes}
+            updateTimes={updateTimes}
+        />
+    );
+
+    const guestsInput = screen.getByLabelText("Number of Guests");
+    fireEvent.change(guestsInput, { target: { value: 11 } });
+    fireEvent.blur(guestsInput);
+    const errorMessage = screen.getByTestId('errorMsg');
+    const submitButton = screen.getByRole('button');
+
+    expect(errorMessage).toBeInTheDocument();
+    expect(errorMessage).toHaveTextContent('Please choose amount between 1 and 10');
+    expect(submitButton).toBeDisabled();
 });

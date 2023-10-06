@@ -20,6 +20,17 @@ function BookingForm(props) {
     const [occasion, setOccasion] = useState(null);
     const [occasionInput, setOccasionInput] = useState("None");
 
+    function isValid(input) {
+        return input !== "";
+    }
+
+    function areAllFieldsValid() {
+        return isValid(dateInput) && 
+            isValid(timeInput) &&  
+            (isValid(guestsInput) && (Number(guestsInput) > 0 && Number(guestsInput) <= 10)) && 
+            isValid(occasionInput)
+    }
+
     function handleChangeDate(e) {
         setDateInput(e.target.value);
         setAvailableTimes(e.target.value);
@@ -77,6 +88,7 @@ function BookingForm(props) {
                     required={true}
                     data-testid="date"
                 /><br/>
+                {!isValid(dateInput) && <><span className="errorMsg" data-testid="errorMsg">Field is required</span><br/></>}
                 <label htmlFor="time">Time</label><br/>
                 <select 
                     type="time" 
@@ -96,6 +108,7 @@ function BookingForm(props) {
                         </option>
                     )}
                 </select><br/>
+                {!isValid(timeInput) && <><span className="errorMsg" data-testid="errorMsg">Field is required</span><br/></>}
                 <label htmlFor="guests">Number of Guests</label><br/>
                 <input 
                     type="number" 
@@ -108,6 +121,12 @@ function BookingForm(props) {
                     onChange={handleChangeGuests}
                     required={true}
                 /><br/>
+                {!isValid(guestsInput) && <><span className="errorMsg" data-testid="errorMsg">Field is required</span><br/></>}
+                {
+                    isValid(guestsInput) && 
+                    (Number(guestsInput) <= 0 || Number(guestsInput) > 10) && 
+                    <><span className="errorMsg" data-testid="errorMsg">Please choose amount between 1 and 10</span><br/></>
+                }
                 <label htmlFor="occasion">Occasion</label><br/>
                 <select 
                     name="occasion" 
@@ -119,7 +138,8 @@ function BookingForm(props) {
                     <option value="birthday">Birthday</option>
                     <option value="anniversary">Anniversary</option>
                 </select><br/>
-                <button type="submit">Submit</button>
+                {!isValid(occasionInput) && <><span className="errorMsg" data-testid="errorMsg">Field is required</span><br/></>}
+                <button type="submit" disabled={!areAllFieldsValid()} aria-label="Submit">Submit</button>
             </form>
         </section>
     );
