@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/little-lemon-booking-table/static/css/main.958ef96e.css",
+    "main.js": "/little-lemon-booking-table/static/js/main.f5e33935.js",
+    "static/media/chefs.jpg": "/little-lemon-booking-table/static/media/chefs.6ba0e06bfa9c1ea75109.jpg",
+    "static/media/bruchetta.svg": "/little-lemon-booking-table/static/media/bruchetta.29ea078fea3d3120ed22402e901b5bbc.svg",
+    "static/media/greek-salad.jpg": "/little-lemon-booking-table/static/media/greek-salad.bed423a1fab5b210e347.jpg",
+    "static/media/hero.jpg": "/little-lemon-booking-table/static/media/hero.e8abf5b772b6817189aa.jpg",
+    "static/media/quinton.jpeg": "/little-lemon-booking-table/static/media/quinton.2d73802698b3e57d37b3.jpeg",
+    "static/media/reservations.jpg": "/little-lemon-booking-table/static/media/reservations.aea83520e9ea5eaa819f.jpg",
+    "static/media/restaurant.jpg": "/little-lemon-booking-table/static/media/restaurant.324d0f99bdf19400a0f7.jpg",
+    "static/media/sally.jpeg": "/little-lemon-booking-table/static/media/sally.b610f1963a17fd31ce08.jpeg",
+    "static/media/Asset 20@4x.png": "/little-lemon-booking-table/static/media/Asset 20@4x.2c859235d6c57bb54176.png",
+    "static/media/john.jpeg": "/little-lemon-booking-table/static/media/john.49a31c66b6b91e2e7f11.jpeg",
+    "static/media/Asset 16@4x.png": "/little-lemon-booking-table/static/media/Asset 16@4x.d4cae6fac8384c2dae04.png",
+    "static/media/ally.jpeg": "/little-lemon-booking-table/static/media/ally.f21552ab2927afcff5a4.jpeg",
+    "index.html": "/little-lemon-booking-table/index.html",
+    "main.958ef96e.css.map": "/little-lemon-booking-table/static/css/main.958ef96e.css.map",
+    "main.f5e33935.js.map": "/little-lemon-booking-table/static/js/main.f5e33935.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.958ef96e.css",
+    "static/js/main.f5e33935.js"
+  ]
+}
